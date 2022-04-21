@@ -15,8 +15,6 @@ const News = () => {
 
     const currentNews = data.news.filter((news) => news.id === Number(params.id))[0];
 
-    console.log('current', currentNews);
-
     setNews(currentNews);
   }, [params]);
 

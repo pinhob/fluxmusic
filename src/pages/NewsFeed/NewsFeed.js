@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getNews } from '../../api';
 import { NewsList } from '../../components';
 
 const NewsFeed = () => {
   const [news, setNews] = useState(null);
-
-
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('fluxMusic'));
