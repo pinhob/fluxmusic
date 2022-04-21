@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import { Albums, Artists, Homepage, NewsFeed, News } from './pages';
+import { GlobalStyle } from './styles';
 
 function App() {
   return (
     <>
+      <GlobalStyle />
       <h1>FluxMusic</h1>
 
       <Routes>
