@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getNews } from '../../api';
-import { NewsCard } from '../../components';
+import { NewsList } from '../../components';
 
 const NewsFeed = () => {
   const [news, setNews] = useState(null);
@@ -22,7 +22,7 @@ const NewsFeed = () => {
       <h1>Notícias</h1>
       {
         news
-          ? <NewsCard news={news} />
+          ? <NewsList news={news} />
           : 'Nenhuma notícia encontrada'
       }
     </main>
