@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getNews, getArtists, getAlbums } from '../../api';
 import { Link } from 'react-router-dom';
-import { ArtistsCards, AlbumsCards } from "../../components";
+import { ArtistsCards, AlbumsCards, NewsCard } from "../../components";
 
 const Homepage = () => {
   const [news, setNews] = useState(null);
@@ -32,26 +32,28 @@ const Homepage = () => {
   return (
     <main>
       <section>
-        <h1>Notícias</h1>
+        <h1><Link to="/noticias">Notícias</Link></h1>
         {
           news
-            ? news.map((news) => (
-              <article key={news.id}>
-                <h2>{news.title}</h2>
-                <h3>{news.subtitle}</h3>
-              </article>
-            ))
+            ? (
+              <div>
+                <NewsCard news={news.slice(0, 3)} />
+                <span>
+                  <Link to='/noticias'>Ver todos</Link>
+                </span>
+              </div>
+            )
             : 'Carregando...'
         }
       </section>
 
       <section>
-        <h1><Link to="/artists">Artistas</Link></h1>
+        <h1><Link to="/artistas">Artistas</Link></h1>
         {
           artists
             ? (
               <div>
-                <ArtistsCards artists={artists.slice(0, 3)} />
+                <ArtistsCards artists={artists.slice(0, 4)} />
                 <span>
                   <Link to='/artistas'>Ver todos</Link>
                 </span>
