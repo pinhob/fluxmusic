@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { SanitizeHTML } from "../../helpers";
 
 const News = () => {
   const [news, setNews] = useState(null);
@@ -28,7 +29,7 @@ const News = () => {
               <h3>Notícia</h3>
               <h1>{news.title}</h1>
               <h2>{news.subtitle}</h2>
-              <div dangerouslySetInnerHTML={{ __html: news.content }}></div>
+              <SanitizeHTML html={news.content} />
             </article>
           )
           : 'Carregando...'
