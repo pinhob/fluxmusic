@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Artists, Homepage } from './pages';
+import { Albums, Artists, Homepage } from './pages';
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/artists" element={<Artists />} />
+        <Route path="/artistas" element={<Artists />} />
+        <Route path="/albuns" element={<Albums />} />
       </Routes>
     </>
   );
