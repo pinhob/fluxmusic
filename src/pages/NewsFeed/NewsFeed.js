@@ -5,17 +5,16 @@ import { NewsCard } from '../../components';
 const NewsFeed = () => {
   const [news, setNews] = useState(null);
 
+
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data: { data: news } } = await getNews();
-        setNews(news);
-      } catch (error) {
-        console.log(error);
-      }
+    const data = JSON.parse(localStorage.getItem('fluxMusic'));
+
+    if (!data) {
+      return setNews(false);
     }
 
-    fetchData();
+    setNews(data.news);
   }, []);
 
   return (
@@ -24,7 +23,7 @@ const NewsFeed = () => {
       {
         news
           ? <NewsCard news={news} />
-          : 'Carregando...'
+          : 'Nenhuma notícia encontrada'
       }
     </main>
   )

@@ -5,18 +5,23 @@ import ArtistsCards from "../../components/ArtistsCard";
 const Artists = () => {
   const [artists, setArtists] = useState(null);
 
+  const fetchArtists = async () => {
+    try {
+      const { data: { data: artists } } = await getArtists();
+      setArtists(artists);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data: { data: artists } } = await getArtists();
-        setArtists(artists);
-        console.log('artists\n', artists);
-      } catch (error) {
-        console.log(error);
-      }
+    const data = JSON.parse(localStorage.getItem('fluxMusic'));
+
+    if (!data) {
+      return fetchArtists();
     }
 
-    fetchData();
+    setArtists(data.artists);
   }, []);
 
   return (

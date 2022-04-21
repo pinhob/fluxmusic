@@ -4,18 +4,25 @@ import { getAlbums } from '../../api';
 const Albums = () => {
   const [albums, setAlbums] = useState(null);
 
+  const fetchAlbums = async () => {
+    try {
+      const { data: { data: albums } } = await getAlbums();
+      setAlbums(albums);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data: { data: albums } } = await getAlbums();
-        setAlbums(albums);
-      } catch (error) {
-        console.log(error);
-      }
+    const data = JSON.parse(localStorage.getItem('fluxMusic'));
+
+    if (!data) {
+      return fetchAlbums();
     }
 
-    fetchData();
-  });
+    setAlbums(data.albums);
+  }, []);
+
   return (
     <div>
       <h1>Álbuns</h1>
