@@ -5,7 +5,7 @@ const NewsCard = ({ news }) => {
     news && news.map((news) => (
       <article key={news.id}>
         <h2>
-          <Link to={`${news.id}`}>
+          <Link to={`noticias/${news.id}`}>
             {news.title}
           </Link>
         </h2>
