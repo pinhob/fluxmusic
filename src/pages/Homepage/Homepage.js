@@ -20,13 +20,29 @@ const Homepage = () => {
         const { data: { data: albums } } = await getAlbums();
         setAlbums(albums);
 
+        const allData = {
+          news,
+          artists,
+          albums
+        };
+
+        localStorage.setItem('fluxMusic', JSON.stringify(allData));
+
         console.log('news\n', news, '\nartists\n', artists, '\nalbums\n', albums);
       } catch (error) {
         console.log(error);
       }
     }
 
-    fetchData();
+    const data = JSON.parse(localStorage.getItem('fluxMusic'));
+
+    if (!data) {
+      return fetchData();
+    }
+
+    setNews(data.news);
+    setArtists(data.artists);
+    setAlbums(data.albums);
   }, [])
 
   return (
