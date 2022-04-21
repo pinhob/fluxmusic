@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getNews, getArtists, getAlbums } from '../../api';
 import { Link } from 'react-router-dom';
 import { ArtistsCards, AlbumsCards, NewsCard } from "../../components";
+import { StyledTitle } from "../../styles";
 
 const Homepage = () => {
   const [news, setNews] = useState(null);
@@ -48,7 +49,7 @@ const Homepage = () => {
   return (
     <main>
       <section>
-        <h1><Link to="/noticias">Notícias</Link></h1>
+        <StyledTitle><Link to="/noticias">Notícias</Link></StyledTitle>
         {
           news
             ? (
@@ -64,7 +65,7 @@ const Homepage = () => {
       </section>
 
       <section>
-        <h1><Link to="/artistas">Artistas</Link></h1>
+        <StyledTitle><Link to="/artistas">Artistas</Link></StyledTitle>
         {
           artists
             ? (
@@ -80,7 +81,7 @@ const Homepage = () => {
       </section>
 
       <section>
-        <h1><Link to="/albuns">Álbuns</Link></h1>
+        <StyledTitle><Link to="/albuns">Álbuns</Link></StyledTitle>
         {
           albums
             ? (
