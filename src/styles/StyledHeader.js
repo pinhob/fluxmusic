@@ -1,10 +1,11 @@
 import styled from "styled-components/macro";
 
 const StyledHeader = styled.header`
+  align-items: center;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  max-width: 100%;
 
   .header__title {
     color: var(--secondary-color-white);
@@ -19,28 +20,46 @@ const StyledHeader = styled.header`
     text-decoration: none;
   }
 
-  nav ul {
-    margin: 0;
-    display: flex;
+  nav {
+    display: none;
+  }
+
+  @media (min-width: 750px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    nav {
+      display: block;
+    }
+    
+    nav ul {
+      margin: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      height: 100%;
+      gap: 2rem;
+      list-style: none;
+      align-items: stretch;
+    }
+
+    nav ul li {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li:hover {
+      font-weight: 600;
+      background-color: var(--tertiary-dark-grey);
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  @media (min-width: 1000px) {
     flex-flow: row nowrap;
-    height: 100%;
-    gap: 2rem;
-    list-style: none;
-    align-items: stretch;
-  }
-
-  nav ul li {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 1rem;
-    transition: all 0.3s ease;
-  }
-
-  nav ul li:hover {
-    font-weight: 600;
-    background-color: var(--tertiary-dark-grey);
-    transition: background-color 0.3s ease;
+    justify-content: space-between;
   }
 `
 
