@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NewsList } from '../../components';
+import { StyledNewsFeed } from '../../styles';
 
 const NewsFeed = () => {
   const [news, setNews] = useState(null);
@@ -15,14 +16,14 @@ const NewsFeed = () => {
   }, []);
 
   return (
-    <main>
+    <StyledNewsFeed>
       <h1>Notícias</h1>
       {
         news
           ? <NewsList news={news} />
           : 'Nenhuma notícia encontrada'
       }
-    </main>
+    </StyledNewsFeed>
   )
 };
 

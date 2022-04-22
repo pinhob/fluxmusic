@@ -5,3 +5,5 @@ export { default as StyledArtistCard } from './StyledArtistCard';
 export { default as StyledAlbumCard } from './StyledAlbumCard';
 export { default as StyledHomepage } from './StyledHomepage';
 export { default as StyledSection } from './StyledSection';
+export { default as StyledNewsFeed } from './StyledNewsFeed';
+export { default as StyledNewsList } from './StyleNewsList';
