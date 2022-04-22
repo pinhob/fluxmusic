@@ -17,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: var(--primary-color-black);
     color: var(--secondary-color-white);
-    margin: 0;
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width);
     min-height: 100%;
     padding: 0;
     overflow-x: hidden;
