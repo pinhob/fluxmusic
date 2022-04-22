@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import { Albums, Artists, Homepage, NewsFeed, News } from './pages';
+import { Header } from './components';
 import { GlobalStyle } from './styles';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>FluxMusic</h1>
+      <Header />
 
       <Routes>
         <Route path="/" element={<Homepage />} />
