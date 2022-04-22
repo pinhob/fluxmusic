@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { AlbumsCards } from '../../components';
 import { getAlbums } from '../../api';
 
 const Albums = () => {
@@ -28,10 +29,7 @@ const Albums = () => {
       <h1>Álbuns</h1>
       {
         albums
-          ? albums.map((album) => (
-            <article key={album.id}>
-              <h2>{album.title}</h2>
-            </article>))
+          ? <AlbumsCards albums={albums} />
           : 'Carregando...'
       }
     </div>
