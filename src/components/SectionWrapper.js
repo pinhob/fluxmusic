@@ -1,17 +1,25 @@
 import { Link } from "react-router-dom";
-import { StyledTitle } from "../styles";
+import { StyledTitle, StyledSection } from "../styles";
 
 const SectionWrapper = ({ children, title, linkPath }) => {
   return (
-    <section>
+    <StyledSection>
       {
-        title && <StyledTitle><Link to={linkPath}>{title}</Link></StyledTitle>
+        title && <h1 className="c-wrapper__title">
+          <Link to={linkPath}>
+            {title}
+          </Link>
+        </h1>
       }
       {children}
       {
-        linkPath && <span><Link to={linkPath}>Ver todos</Link></span>
+        linkPath && <span>
+          <Link to={linkPath} className="c-wrapper__button">
+            Ver mais
+          </Link>
+        </span>
       }
-    </section>
+    </StyledSection>
   )
 };
 
