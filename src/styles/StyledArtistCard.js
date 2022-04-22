@@ -28,6 +28,8 @@ const StyledArtistCard = styled.article`
   }
 
   @media (min-width: 750px) {
+    max-width: 49%;
+
     figcaption {
       font-size: 2.5rem;
     }

@@ -56,7 +56,7 @@ const Homepage = () => {
         {
           news
             ? (
-              <div>
+              <div class="c-card__wrapper">
                 <NewsCard news={news.slice(0, 3)} />
               </div>
             )
@@ -68,7 +68,7 @@ const Homepage = () => {
         {
           artists
             ? (
-              <div>
+              <div className="c-card__wrapper--flex-row">
                 <ArtistsCards artists={artists.slice(0, 4)} />
               </div>
             )
@@ -80,8 +80,8 @@ const Homepage = () => {
         {
           albums
             ? (
-              <div>
-                <AlbumsCards albums={albums.slice(0, 5)} />
+              <div className="c-card__wrapper--flex-row">
+                <AlbumsCards albums={albums.slice(0, 4)} />
               </div>
             )
             : 'Carregando...'
