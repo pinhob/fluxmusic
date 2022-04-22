@@ -11,7 +11,13 @@ const StyledHomepage = styled.main`
     gap: 2rem;
   }
 
-  .c-card__wrapper--flex-row {
+  .c-card__wrapper article:hover {
+    background-color: var(--dark-grey);
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .--flex-row {
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;

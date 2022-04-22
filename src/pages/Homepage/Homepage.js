@@ -68,7 +68,7 @@ const Homepage = () => {
         {
           artists
             ? (
-              <div className="c-card__wrapper--flex-row">
+              <div className="c-card__wrapper --flex-row">
                 <ArtistsCards artists={artists.slice(0, 4)} />
               </div>
             )
@@ -80,7 +80,7 @@ const Homepage = () => {
         {
           albums
             ? (
-              <div className="c-card__wrapper--flex-row">
+              <div className="c-card__wrapper --flex-row">
                 <AlbumsCards albums={albums.slice(0, 4)} />
               </div>
             )
