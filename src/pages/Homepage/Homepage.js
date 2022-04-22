@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { getNews, getArtists, getAlbums } from '../../api';
 import { Link } from 'react-router-dom';
-import { ArtistsCards, AlbumsCards, NewsCard } from "../../components";
+import {
+  ArtistsCards,
+  AlbumsCards,
+  NewsCard,
+  SectionWrapper
+} from "../../components";
 import { StyledTitle, StyledHomepage } from "../../styles";
 
 const Homepage = () => {
@@ -48,52 +53,41 @@ const Homepage = () => {
 
   return (
     <StyledHomepage>
-      <section>
-        <StyledTitle><Link to="/noticias">Notícias</Link></StyledTitle>
+      <SectionWrapper title="Notícias" linkPath="/noticias">
         {
           news
             ? (
               <div>
                 <NewsCard news={news.slice(0, 3)} />
-                <span>
-                  <Link to='/noticias'>Ver todos</Link>
-                </span>
               </div>
             )
             : 'Carregando...'
         }
-      </section>
+      </SectionWrapper>
 
-      <section>
-        <StyledTitle><Link to="/artistas">Artistas</Link></StyledTitle>
+      <SectionWrapper title="Artistas" linkPath="/artistas">
         {
           artists
             ? (
               <div>
                 <ArtistsCards artists={artists.slice(0, 4)} />
-                <span>
-                  <Link to='/artistas'>Ver todos</Link>
-                </span>
               </div>
             )
             : 'Carregando...'
         }
-      </section>
+      </SectionWrapper>
 
-      <section>
-        <StyledTitle><Link to="/albuns">Álbuns</Link></StyledTitle>
+      <SectionWrapper title="Álbuns" linkPath="/albuns">
         {
           albums
             ? (
               <div>
-                <AlbumsCards albums={albums.slice(0, 5)} />            <span>
-                  <Link to='/albuns'>Ver todos</Link>
-                </span>
+                <AlbumsCards albums={albums.slice(0, 5)} />
               </div>
             )
             : 'Carregando...'
         }
-      </section>
+      </SectionWrapper>
     </StyledHomepage>
   )
 }
