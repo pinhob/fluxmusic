@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
-import { StyledTitle, StyledSection } from "../styles";
+import { StyledSection } from "../styles";
 
 const SectionWrapper = ({ children, title, linkPath }) => {
   return (
     <StyledSection>
       {
-        title && <h1 className="c-wrapper__title">
-          <Link to={linkPath}>
-            {title}
-          </Link>
-        </h1>
+        title && (
+          <>
+            {linkPath
+              ? (
+                <h1 className="c-wrapper__title">
+                  <Link to={linkPath}>
+                    {title}
+                  </Link>
+                </h1>)
+              : (<h1>{title}</h1>)
+            }
+          </>
+        )
       }
       {children}
       {

@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { getNews, getArtists, getAlbums } from '../../api';
-import { Link } from 'react-router-dom';
 import {
   ArtistsCards,
   AlbumsCards,
   NewsCard,
   SectionWrapper
 } from "../../components";
-import { StyledTitle, StyledHomepage } from "../../styles";
+import { StyledHomepage } from "../../styles";
 
 const Homepage = () => {
   const [news, setNews] = useState(null);
