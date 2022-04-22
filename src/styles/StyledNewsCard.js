@@ -1,18 +1,22 @@
 import styled from "styled-components";
 
 const StyledNewsCard = styled.article`
-  /* align-items: center; */
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, auto);
+  width: 100%;
 
   img {
-    min-width: 200px;
-    width: 100%;
-    grid-column: 1 / 2;
-    grid-row: 1 / 5;
+    border-radius: 5px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
     object-fit: cover;
+    width: 100%;
+  }
+
+  h2 {
+    grid-column: 1 / 3;
   }
 
   .c-card__title {
@@ -27,8 +31,14 @@ const StyledNewsCard = styled.article`
 
   @media (min-width: 750px) {
     img {
-      max-height: 250px;
       align-self: stretch;
+      grid-column: 1/ 2;
+      grid-row: span 5;
+      max-height: 250px;
+    }
+
+    h2 { 
+      grid-column: 2 / 3;
     }
 
     .c-card__description {
