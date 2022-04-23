@@ -17,6 +17,12 @@ const StyledSection = styled.section`
     padding: 1rem;
   }
 
+  .c-wrapper__button:hover {
+    background-color: var(--light-green);
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
   .c-wrapper__title {
     font-size: 2.5rem;
   margin: 1rem 0;
