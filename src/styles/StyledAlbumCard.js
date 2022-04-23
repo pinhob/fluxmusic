@@ -30,7 +30,7 @@ const StyledAlbumCard = styled.article`
   }
 
   @media (min-width: 1000px) {
-    width: 24%;
+    width: 23.5%;
     justify-content: space-between;
     text-align: center;
   }
