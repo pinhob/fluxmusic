@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArtists } from '../../api';
 import ArtistsCards from "../../components/ArtistsCard";
+import { StyledArtists } from "../../styles";
 
 const Artists = () => {
   const [artists, setArtists] = useState(null);
@@ -25,14 +26,16 @@ const Artists = () => {
   }, []);
 
   return (
-    <main>
-      <h1>Artistas</h1>
+    <StyledArtists>
+      <h1 className="c-title">Artistas</h1>
       {
         artists
-          ? <ArtistsCards artists={artists} />
+          ? <div className="--flex-flow">
+            <ArtistsCards artists={artists} />
+          </div>
           : 'Carregando...'
       }
-    </main>
+    </StyledArtists>
   )
 };
 
