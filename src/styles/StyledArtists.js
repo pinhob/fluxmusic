@@ -15,7 +15,7 @@ const StyledArtists = styled.main`
     transition: background-color 0.3s ease;
   }
 
-  .--flex-flow {
+  .--flex-row {
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;

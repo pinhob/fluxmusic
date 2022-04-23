@@ -30,7 +30,7 @@ const Artists = () => {
       <h1 className="c-title">Artistas</h1>
       {
         artists
-          ? <div className="--flex-flow">
+          ? <div className="--flex-row">
             <ArtistsCards artists={artists} />
           </div>
           : 'Carregando...'
