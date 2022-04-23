@@ -7,3 +7,4 @@ export { default as StyledHomepage } from './StyledHomepage';
 export { default as StyledSection } from './StyledSection';
 export { default as StyledNewsFeed } from './StyledNewsFeed';
 export { default as StyledNewsList } from './StyleNewsList';
+export { default as StyledNews } from './StyledNews';
