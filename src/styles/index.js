@@ -8,4 +8,4 @@ export { default as StyledSection } from './StyledSection';
 export { default as StyledNewsFeed } from './StyledNewsFeed';
 export { default as StyledNewsList } from './StyleNewsList';
 export { default as StyledNews } from './StyledNews';
-export { default as StyledArtists } from './StyledArtists';
+export { default as StyledContent } from './StyledContent';

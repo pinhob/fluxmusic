@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArtists } from '../../api';
 import ArtistsCards from "../../components/ArtistsCard";
-import { StyledArtists } from "../../styles";
+import { StyledContent } from "../../styles";
 
 const Artists = () => {
   const [artists, setArtists] = useState(null);
@@ -26,7 +26,7 @@ const Artists = () => {
   }, []);
 
   return (
-    <StyledArtists>
+    <StyledContent>
       <h1 className="c-title">Artistas</h1>
       {
         artists
@@ -35,7 +35,7 @@ const Artists = () => {
           </div>
           : 'Carregando...'
       }
-    </StyledArtists>
+    </StyledContent>
   )
 };
 

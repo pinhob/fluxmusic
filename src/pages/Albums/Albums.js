@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AlbumsCards } from '../../components';
 import { getAlbums } from '../../api';
+import { StyledContent } from '../../styles';
 
 const Albums = () => {
   const [albums, setAlbums] = useState(null);
@@ -25,14 +26,16 @@ const Albums = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Álbuns</h1>
+    <StyledContent>
+      <h1 className='c-title'>Álbuns</h1>
       {
         albums
-          ? <AlbumsCards albums={albums} />
+          ? <div className="--flex-row">
+            <AlbumsCards albums={albums} />
+          </div>
           : 'Carregando...'
       }
-    </div>
+    </StyledContent>
   );
 };
 

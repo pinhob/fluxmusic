@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-const StyledArtists = styled.main`
+const StyledAlbums = styled.main`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
@@ -8,7 +8,7 @@ const StyledArtists = styled.main`
   .c-title {
     font-size: 3rem;
   }
-
+  
   article:hover {
     background-color: var(--dark-grey);
     border-radius: 15px;
@@ -22,4 +22,4 @@ const StyledArtists = styled.main`
   }
 `;
 
-export default StyledArtists;
+export default StyledAlbums;
