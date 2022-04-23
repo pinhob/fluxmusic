@@ -53,42 +53,33 @@ const Homepage = () => {
 
   return (
     <StyledHomepage>
-      <SectionWrapper title="Notícias" linkPath="/noticias">
-        {
-          news
-            ? (
-              <div class="c-card__wrapper">
-                <NewsCard news={news.slice(0, 3)} />
-              </div>
-            )
-            : <Loader />
-        }
-      </SectionWrapper>
+      {
+        news && artists && albums
+          ? (
+            <>
+              <SectionWrapper title="Notícias" linkPath="/noticias">
+                <div class="c-card__wrapper">
+                  <NewsCard news={news.slice(0, 3)} />
+                </div>
+              </SectionWrapper>
 
-      <SectionWrapper title="Artistas" linkPath="/artistas">
-        {
-          artists
-            ? (
-              <div className="c-card__wrapper --flex-row">
-                <ArtistsCards artists={artists.slice(0, 4)} />
-              </div>
-            )
-            : 'Carregando...'
-        }
-      </SectionWrapper>
+              <SectionWrapper title="Artistas" linkPath="/artistas">
+                <div className="c-card__wrapper --flex-row">
+                  <ArtistsCards artists={artists.slice(0, 4)} />
+                </div>
+              </SectionWrapper>
 
-      <SectionWrapper title="Álbuns" linkPath="/albuns">
-        {
-          albums
-            ? (
-              <div className="c-card__wrapper --flex-row">
-                <AlbumsCards albums={albums.slice(0, 4)} />
-              </div>
-            )
-            : <Loader />
-        }
-      </SectionWrapper>
-    </StyledHomepage>
+              <SectionWrapper title="Álbuns" linkPath="/albuns">
+                <div className="c-card__wrapper --flex-row">
+                  <AlbumsCards albums={albums.slice(0, 4)} />
+                </div>
+              </SectionWrapper>
+            </>
+
+          )
+          : <Loader />
+      }
+    </StyledHomepage >
   )
 }
 
