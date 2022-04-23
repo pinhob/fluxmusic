@@ -6,11 +6,26 @@ const StyledHeader = styled.header`
   flex-flow: row nowrap;
   justify-content: space-between;
   max-width: 100%;
+  margin-bottom: 1.5rem;
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .header__logo:hover {
+    cursor: pointer;
+  }
 
   .header__title {
     color: var(--secondary-color-white);
     font-weight: 800;
     font-size: 2rem;
+  }
+
+  .header__logo img {
+    width: 42px;
   }
 
   a {

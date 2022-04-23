@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import { StyledHeader } from "../styles";
-
+import Logo from '../assets/fluxmusic_logo_64.png';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <h1><Link to="/" className="header__title">fluxMusic</Link></h1>
+      <Link to="/" className="header__logo">
+        <img src={Logo} alt="" />
+        <h1 className="header__title">
+          fluxMusic
+        </h1>
+      </Link>
+
       <nav>
         <ul>
           <li>
