@@ -6,6 +6,7 @@ import {
   NewsCard,
   SectionWrapper
 } from "../../components";
+import { Loader } from "../../helpers";
 import { StyledHomepage } from "../../styles";
 
 const Homepage = () => {
@@ -60,7 +61,7 @@ const Homepage = () => {
                 <NewsCard news={news.slice(0, 3)} />
               </div>
             )
-            : 'Carregando...'
+            : <Loader />
         }
       </SectionWrapper>
 
@@ -84,7 +85,7 @@ const Homepage = () => {
                 <AlbumsCards albums={albums.slice(0, 4)} />
               </div>
             )
-            : 'Carregando...'
+            : <Loader />
         }
       </SectionWrapper>
     </StyledHomepage>

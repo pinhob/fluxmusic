@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArtists } from '../../api';
 import ArtistsCards from "../../components/ArtistsCard";
+import { Loader } from "../../helpers";
 import { StyledContent } from "../../styles";
 
 const Artists = () => {
@@ -33,7 +34,7 @@ const Artists = () => {
           ? <div className="--flex-row">
             <ArtistsCards artists={artists} />
           </div>
-          : 'Carregando...'
+          : <Loader />
       }
     </StyledContent>
   )

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { NewsList } from '../../components';
 import { StyledNewsFeed } from '../../styles';
+import { Loader } from '../../helpers';
+
 
 const NewsFeed = () => {
   const [news, setNews] = useState(null);
@@ -21,7 +23,7 @@ const NewsFeed = () => {
       {
         news
           ? <NewsList news={news} />
-          : 'Nenhuma notícia encontrada'
+          : <Loader />
       }
     </StyledNewsFeed>
   )

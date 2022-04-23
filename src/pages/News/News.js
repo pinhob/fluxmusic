@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { SanitizeHTML } from "../../helpers";
+import { SanitizeHTML, Loader } from "../../helpers";
 import { StyledNews } from "../../styles";
 
 const News = () => {
@@ -32,7 +32,7 @@ const News = () => {
               <SanitizeHTML html={news.content} />
             </StyledNews>
           )
-          : 'Carregando...'
+          : <Loader />
       }
     </div>
   )
