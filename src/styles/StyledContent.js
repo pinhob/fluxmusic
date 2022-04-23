@@ -4,6 +4,7 @@ const StyledContent = styled.main`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+  padding: 0 1rem;
 
   .c-title {
     font-size: 3rem;

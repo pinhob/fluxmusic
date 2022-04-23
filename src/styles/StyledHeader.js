@@ -7,6 +7,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   max-width: 100%;
   margin-bottom: 1.5rem;
+  padding: 1rem 0 0 1rem;
 
   .header__logo {
     display: flex;

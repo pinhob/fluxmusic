@@ -4,6 +4,7 @@ const StyledHomepage = styled.main`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+  padding: 0 1rem;
 
   .c-card__wrapper {
     display: flex;

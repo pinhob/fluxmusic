@@ -5,6 +5,7 @@ const StyledNews = styled.article`
   flex-flow: column nowrap;
   gap: 0.8rem;
   margin-top: 1.5rem;
+  padding: 0 1rem;
 
   h1 {
     color: var(--secondary-color-green);
