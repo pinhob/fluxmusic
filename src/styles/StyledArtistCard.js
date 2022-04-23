@@ -37,7 +37,7 @@ const StyledArtistCard = styled.article`
 
   @media (min-width: 1000px) {
     figcaption {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
   }
 `;
