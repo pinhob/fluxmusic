@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🎵 fluxMusic | Desafio front-end da goFlux
+![image](https://user-images.githubusercontent.com/20286747/165140769-f6bc44b8-577b-41df-811f-53762578d38a.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Neste repositório está o **desafio técnico da goFlux**. É uma aplicação de **que exibe notícias, artistas renomados e álbuns do momento do mundo da música**. Tudo isso consumindo a Music Story API. 
 
-## Available Scripts
+---
+## Sumário
+- [Contexto do desafio](#contexto-do-desafio)
+- [Stack utlizada](#stack-utilizada)
+- [Rodando o projeto](#rodando-o-projeto)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Clonando o repositório](#clonando-o-repositório)
+  - [Instalando as dependências](#instalando-as-dependências)
+  - [Rodando o projeto](#rodando-o-projeto)
+- [Próximos passos](#próximos-passos)
 
-In the project directory, you can run:
+## Contexto do desafio
+> Imagine que a goFlux decidiu investir num produto novo, onde os clientes acessarão o fluxMusic, um site inovador que possibilita descobrir artistas e álbuns do seu gênero preferido, além de ficar por dentro de tudo que acontece no mundo da música. Para que o projeto seja um sucesso, você foi escolhido para implementar o front do site e lhe foi dada toda a liberdade para criação do layout.
 
-### `npm start`
+## Stack utilizada
+Esta aplicação foi criada usando **React**, **React Router** e **Styled Components**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Rodando o projeto
+### Pré-requisitos: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para rodar este projeto é necessário que você tenha instalado:
+* **Node**, na versão `14.6` ou maior;
+* **NPM**, na versão `7.21`ou maior;
 
-### `npm test`
+### Clonando o repositório
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone o repositório inserindo os seguintes comandos em seu terminal: 
+```
+git clone git@github.com:pinhob/fluxmusic.git
+cd fluxmusic
+```
+### Instalando as dependências
+Dentro do diretório do projeto, rode em seu terminal o comando para instalar as dependências: 
+```
+npm install
+```
+Com isso será descarregado o `node_modules` e instalada as dependências.
 
-### `npm run build`
+### Rodando o projeto
+Execute o projeto com o comando:
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Próximos passos
+Alguns dos próximos passos para a aplicação são:
+* **Criar uma cobertura de testes para todas as páginas utilizando Jest e RTL**.
+* Usar API da Wikipédia para conseguir e exibir as imagens dos artistas e álbuns.
+* Criar footer e adicionar às páginas.
+* Fazer ajustes de estilo.
